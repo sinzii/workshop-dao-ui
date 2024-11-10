@@ -12,10 +12,7 @@ import { development } from 'typink/networks/development';
 import { alephZeroTestnet, popTestnet } from 'typink/networks/testnet';
 
 const DEFAULT_CALLER = '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY'; // Alice
-const SUPPORTED_NETWORK = [popTestnet, alephZeroTestnet];
-if (process.env.NODE_ENV === 'development') {
-  SUPPORTED_NETWORK.push(development);
-}
+const SUPPORTED_NETWORK = [popTestnet];
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -34,7 +31,7 @@ root.render(
           theme='light'
           autoClose={5_000}
           hideProgressBar
-          limit={2}
+          limit={10}
         />
       </AppProvider>
     </TypinkProvider>

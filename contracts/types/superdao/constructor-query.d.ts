@@ -13,9 +13,9 @@ import type { InkPrimitivesLangError } from './types';
 
 export interface ConstructorQuery<ChainApi extends GenericSubstrateApi> extends GenericConstructorQuery<ChainApi> {
   /**
-   * Creates a new greeter contract initialized with the given value.
    *
-   * @param {string} initValue
+   * @param {number} voteThreshold
+   * @param {number} votingPeriod
    * @param {ConstructorCallOptions} options
    *
    * @selector 0x9bae9d5e
@@ -23,13 +23,13 @@ export interface ConstructorQuery<ChainApi extends GenericSubstrateApi> extends 
   new: GenericConstructorQueryCall<
     ChainApi,
     (
-      initValue: string,
-      options: ConstructorCallOptions,
+      voteThreshold: number,
+      votingPeriod: number,
+      options?: ConstructorCallOptions,
     ) => Promise<GenericConstructorCallResult<[], ContractInstantiateResult<ChainApi>>>
   >;
 
   /**
-   * Creates a new greeter contract initialized to 'Hello ink!'.
    *
    * @param {ConstructorCallOptions} options
    *
@@ -37,6 +37,6 @@ export interface ConstructorQuery<ChainApi extends GenericSubstrateApi> extends 
    **/
   default: GenericConstructorQueryCall<
     ChainApi,
-    (options: ConstructorCallOptions) => Promise<GenericConstructorCallResult<[], ContractInstantiateResult<ChainApi>>>
+    (options?: ConstructorCallOptions) => Promise<GenericConstructorCallResult<[], ContractInstantiateResult<ChainApi>>>
   >;
 }

@@ -13,13 +13,13 @@ import { ContractEvents } from './events';
 export * from './types';
 
 /**
- * @name: Psp22ContractApi
- * @contractName: psp22
- * @contractVersion: 2.0.0
- * @authors: Cardinal
+ * @name: Challenge5ContractContractApi
+ * @contractName: challenge-5-contract
+ * @contractVersion: 0.1.0
+ * @authors: [your_name] <[your_email]>
  * @language: ink! 5.0.0
  **/
-export interface Psp22ContractApi<
+export interface Challenge5ContractContractApi<
   Rv extends RpcVersion = RpcVersion,
   ChainApi extends VersionedGenericSubstrateApi = SubstrateApi,
 > extends GenericContractApi<Rv, ChainApi> {

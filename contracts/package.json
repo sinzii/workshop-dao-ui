@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.1",
   "scripts": {
-    "typink": "dedot typink -m ../contracts/artifacts/psp22/psp22.contract -o ../contracts/types && dedot typink -m ../contracts/artifacts/greeter/greeter.contract -o ../contracts/types"
+    "typink": "npx dedot typink -m ./artifacts/superdao/superdao.contract -o ./types && npx dedot typink -m ./artifacts/minidao/challenge_5_contract.contract -o ./types"
   },
   "type": "module",
   "dependencies": {

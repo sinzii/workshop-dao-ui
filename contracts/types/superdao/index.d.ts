@@ -13,13 +13,13 @@ import { ContractEvents } from './events';
 export * from './types';
 
 /**
- * @name: GreeterContractApi
- * @contractName: greeter
- * @contractVersion: 0.0.1
- * @authors: Scio Labs <hello@scio.xyz>
+ * @name: SuperdaoContractApi
+ * @contractName: superdao
+ * @contractVersion: 0.1.0
+ * @authors: [your_name] <[your_email]>
  * @language: ink! 5.0.0
  **/
-export interface GreeterContractApi<
+export interface SuperdaoContractApi<
   Rv extends RpcVersion = RpcVersion,
   ChainApi extends VersionedGenericSubstrateApi = SubstrateApi,
 > extends GenericContractApi<Rv, ChainApi> {

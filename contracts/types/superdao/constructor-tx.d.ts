@@ -10,20 +10,23 @@ import type {
 
 export interface ConstructorTx<ChainApi extends GenericSubstrateApi> extends GenericConstructorTx<ChainApi> {
   /**
-   * Creates a new greeter contract initialized with the given value.
    *
-   * @param {string} initValue
+   * @param {number} voteThreshold
+   * @param {number} votingPeriod
    * @param {ConstructorTxOptions} options
    *
    * @selector 0x9bae9d5e
    **/
   new: GenericConstructorTxCall<
     ChainApi,
-    (initValue: string, options: ConstructorTxOptions) => GenericInstantiateSubmittableExtrinsic<ChainApi>
+    (
+      voteThreshold: number,
+      votingPeriod: number,
+      options: ConstructorTxOptions,
+    ) => GenericInstantiateSubmittableExtrinsic<ChainApi>
   >;
 
   /**
-   * Creates a new greeter contract initialized to 'Hello ink!'.
    *
    * @param {ConstructorTxOptions} options
    *
