@@ -57,10 +57,10 @@ export function Proposal({ index, proposal }: ProposalProps) {
         Last vote: <b>{vote || 'Not voted yet'}</b>
       </Box>
       <Flex mt={4} gap={2}>
-        <Button colorScheme='green' size='sm' onClick={() => voteProposal(true)} isLoading={voteTx.isInProgress}>
+        <Button colorScheme='green' size='sm' onClick={() => voteProposal(true)} isLoading={voteTx.inBestBlockProgress}>
           Aye
         </Button>
-        <Button colorScheme='red' size='sm' onClick={() => voteProposal(false)} isLoading={voteTx.isInProgress}>
+        <Button colorScheme='red' size='sm' onClick={() => voteProposal(false)} isLoading={voteTx.inBestBlockProgress}>
           Nay
         </Button>
       </Flex>

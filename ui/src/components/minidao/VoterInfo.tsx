@@ -65,14 +65,14 @@ export function VoterInfo({ address }: VoterInfoProps) {
       {isVoter ? (
         <Box mt={2}>
           <Text>You're a voter</Text>
-          <Button mt={2} size='sm' onClick={deregisterVoter} isLoading={deregisterVoterTx.isInProgress}>
+          <Button mt={2} size='sm' onClick={deregisterVoter} isLoading={deregisterVoterTx.inBestBlockProgress}>
             Deregister
           </Button>
         </Box>
       ) : (
         <Box mt={2}>
           <Text>You're not a voter, register now!</Text>
-          <Button mt={2} size='sm' onClick={registerVoter} isLoading={registerVoterTx.isInProgress}>
+          <Button mt={2} size='sm' onClick={registerVoter} isLoading={registerVoterTx.inBestBlockProgress}>
             Register as voter
           </Button>
         </Box>

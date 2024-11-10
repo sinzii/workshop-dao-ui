@@ -62,7 +62,7 @@ export function ProposalsPanel() {
     <Box mt={4}>
       <Heading size='sm'>Proposals</Heading>
       <Flex gap={4}>
-        <Button mt={4} size='sm' onClick={doCreateProposal} isLoading={createCrossChainProposalTx.isInProgress}>
+        <Button mt={4} size='sm' onClick={doCreateProposal} isLoading={createCrossChainProposalTx.inBestBlockProgress}>
           Create Cross Chain Proposal
         </Button>
 
@@ -70,7 +70,7 @@ export function ProposalsPanel() {
           mt={4}
           size='sm'
           onClick={doCreateContractCallProposal}
-          isLoading={createContractCallProposalTx.isInProgress}>
+          isLoading={createContractCallProposalTx.inBestBlockProgress}>
           Create Contract Call Proposal
         </Button>
       </Flex>
